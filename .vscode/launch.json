@@ -13,7 +13,7 @@
             ],
             "program": "${workspaceFolder}/index.js",
             "args": [
-                "7",
+                "8",
                 "input.txt"
             ]
         },
