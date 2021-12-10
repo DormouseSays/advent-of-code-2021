@@ -17,7 +17,7 @@ test("parse int returns numbers", () => {
 test("mean returns correct mean", () => {
   const testNumbers = [16, 1, 2, 0, 4, 2, 7, 1, 2, 14];
 
-  const input = utils.mean(testNumbers); 
+  const input = utils.mean(testNumbers);
   expect(input).toBe(4.9);
 });
 
@@ -51,4 +51,18 @@ test("sumRange handles direct ranges", () => {
 
   const val = utils.sumRange(testNumbers);
   expect(val).toBe(realValue);
+});
+
+test("uniqueBy name", () => {
+  const vals = [
+    { id: 1, name: "alice" },
+    { id: 2, name: "bob" },
+    { id: 3, name: "alice" },
+    { id: 4, name: "claire" },
+    { id: 5, name: "alice" },
+  ];
+
+  const results = utils.uniqueBy(vals, 'name');
+
+  expect(results.length).toBe(3);
 });

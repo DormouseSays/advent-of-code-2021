@@ -18,6 +18,8 @@ const median = (arr) => {
 
 const sumRange = (arr) =>  arr.length === 0 ? 0 : arr.length * ((arr[0] + arr[arr.length - 1]) / 2);
 
+const uniqueBy = (arr, prop) => arr.filter( (v, i) => i === arr.findIndex(o => o[prop] === v[prop]));
+
 module.exports = {
   debug,
   parseInputToInts,
@@ -25,5 +27,6 @@ module.exports = {
   createCountArray,
   mean,
   median,
-  sumRange
+  sumRange,
+  uniqueBy
 };
