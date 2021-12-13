@@ -23,7 +23,7 @@ async function runDay(days, day, ...other) {
     return;
   }
 
-  const dayStr = day > 10 ? "" + day : "0" + day;
+  const dayStr = day >= 10 ? "" + day : "0" + day;
 
   console.log(`running day ${day} with input ${`day/${dayStr}/input.txt`}}`);
 
